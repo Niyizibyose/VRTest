@@ -36,7 +36,7 @@ public class VibrtationManager : MonoBehaviour
     }
 
 
-    public void VibrationMan(int iteration, int frequency , OVRInput.Controller controller, int strength)
+    public void VibrationMan(int iteration, int frequency ,  int strength,OVRInput.Controller controller)
     {
         OVRHapticsClip clip = new OVRHapticsClip();
 
