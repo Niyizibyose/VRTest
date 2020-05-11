@@ -25,6 +25,8 @@ public class ShootIfGrabbed : MonoBehaviour
     {
         if (oVRGrabbable.isGrabbed && OVRInput.GetDown(shootingButton, oVRGrabbable.grabbedBy.GetController()) && maxNumberOfBullet>0)
         {
+            VibrtationManager.singleton.VibrationMan(audioClip, oVRGrabbable.grabbedBy.GetController());
+           //VRInput.SetControllerVibration(.5f, .5f, oVRGrabbable.grabbedBy.GetController());
             GetComponent<AudioSource>().PlayOneShot(audioClip);
             simpleShoot.TriggerShoot();
             maxNumberOfBullet--;
